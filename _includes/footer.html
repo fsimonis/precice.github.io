@@ -1,8 +1,40 @@
 <footer>
-    <hr />
-    <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
-    <nav>
-        <a class="github-button" href="https://github.com/precice/precice" target="_blank" data-show-count="false" aria-label="Star precice/precice on GitHub">GitHub</a>
+    <section class="social dark pure-menu-horizontal">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item">
+        <a class="pure-menu-link" href="https://github.com/precice/precice" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        </li>
+
+        <li class="pure-menu-item">
+        <a class="pure-menu-link" href="https://gitter.im/precice/Lobby" target="_blank">
+          <i class="fab fa-gitter"></i>
+        </a>
+        </li>
+
+        <li class="pure-menu-item">
+        <a class="pure-menu-link" href="https://twitter.com/preCICE_org" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        </li>
+
+        <li class="pure-menu-item">
+        <a class="pure-menu-link" href="https://mailman.informatik.uni-stuttgart.de/mailman/listinfo/precice" target="_blank">
+          <i class="fas fa-envelope"></i>
+        </a>
+        </li>
+        </ul>
+
+        <li class="pure-menu-item">
+        <a class="pure-menu-link" href="https://www.researchgate.net/project/preCICE" target="_blank">
+          <i class="fab fa-researchgate"></i>
+        </a>
+        </li>
+    </section>
+
+  <section>
+    <ul>
         <a class="link_image" href="https://github.com/precice/precice/blob/develop/LICENSE" target="_blank">
             <img src="https://img.shields.io/github/license/precice/precice.svg" alt="GNU LGPL license">
         </a>
@@ -12,14 +44,24 @@
         <a class="link_image" href="https://github.com/precice/precice/releases/latest" target="_blank">
             <img src="https://img.shields.io/github/release/precice/precice.svg" alt="Release">
         </a>
-        <a class="link_image" href="https://gitter.im/precice/Lobby" target="_blank">
-            <img src="https://img.shields.io/badge/chat-on%20gitter-9c3375.svg" alt="Gitter chat">
-        </a>
-        <a class="link_image" href="https://mailman.informatik.uni-stuttgart.de/mailman/listinfo/precice" target="_blank">
-            <img src="https://img.shields.io/badge/mailing%20list-subscribe-blue.svg" alt="Mailing list">
-        </a>
-        <a class="link_image" href="https://twitter.com/preCICE_org" target="_blank">
-            <img src="https://img.shields.io/badge/twitter-%40preCICE__org-1da1f2.svg" alt="Twitter">
-        </a>
-    </nav>
+    </ul>
+    </section>
+
+    <section class="dark">
+      <nav class="pure-menu pure-menu-vertical">
+        <ul class="pure-menu-list">
+          {% for page in site.pages %}
+            {% if page.title %}
+                <li class="pure-menu-item">
+                  <a href="{{ page.url | relative_url }}" class="pure-menu-link">{{ page.title }}</a>
+                </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </section>
+
+    <section class="license">
+      <a rel="license" href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+    </section>
 </footer>
